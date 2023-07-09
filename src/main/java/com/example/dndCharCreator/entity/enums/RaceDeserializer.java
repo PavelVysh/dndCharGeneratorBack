@@ -10,6 +10,6 @@ public class RaceDeserializer extends JsonDeserializer<Race> {
     @Override
     public Race deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
         String raceString = jsonParser.getText();
-        return Race.fromString(raceString.replaceAll("\\W", ""));
+        return Race.fromString(raceString.replaceAll("-", "_"));
     }
 }

@@ -1,6 +1,7 @@
 package com.example.dndCharCreator.entity;
 
 
+import com.example.dndCharCreator.entity.enums.Alignment;
 import com.example.dndCharCreator.entity.enums.CharClass;
 import com.example.dndCharCreator.entity.enums.Race;
 import lombok.Data;
@@ -14,5 +15,7 @@ public class Character {
     private Integer level;
     private Race race;
     private CharClass charClass;
+    private Alignment alignment;
+    private String background;
 
 }

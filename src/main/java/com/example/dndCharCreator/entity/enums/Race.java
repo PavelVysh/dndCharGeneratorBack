@@ -8,9 +8,9 @@ public enum Race {
     GNOME,
     DRAGONBORN,
     DWARF,
-    HALFELF,
+    HALF_ELF,
     HUMAN,
-    HALFORC,
+    HALF_ORC,
     HALFLING,
     TIEFLING,
     EMPTY;
