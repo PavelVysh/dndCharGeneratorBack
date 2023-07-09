@@ -15,4 +15,8 @@ public class CharacterService {
         repo.save(character);
     }
 
+    public Character findById(String id) {
+        return repo.findById(id).get();
+    }
+
 }

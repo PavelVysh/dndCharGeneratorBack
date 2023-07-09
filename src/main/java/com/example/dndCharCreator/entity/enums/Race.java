@@ -1,8 +1,10 @@
 package com.example.dndCharCreator.entity.enums;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonDeserialize(using = RaceDeserializer.class)
+@JsonSerialize(using = RaceSerializer.class)
 public enum Race {
     ELF,
     GNOME,

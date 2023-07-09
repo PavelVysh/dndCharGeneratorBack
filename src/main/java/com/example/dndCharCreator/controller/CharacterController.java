@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/character")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000")
 public class CharacterController {
 
     private final CharacterService characterService;
@@ -23,5 +23,10 @@ public class CharacterController {
         characterService.save(character);
 
         logger.debug("{} saved", character);
+    }
+    
+    @GetMapping("/{id}")
+    public Character getById(@PathVariable String id) {
+        return characterService.findById(id);
     }
 }
