@@ -7,6 +7,8 @@ import com.example.dndCharCreator.entity.enums.Race;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Data
 @Document("chars")
 public class Character {
@@ -17,5 +19,6 @@ public class Character {
     private CharClass charClass;
     private Alignment alignment;
     private String background;
+    private List<String> equipment;
 
 }
