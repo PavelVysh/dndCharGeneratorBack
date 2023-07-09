@@ -18,10 +18,10 @@ public class CharacterController {
     private final Logger logger = LoggerFactory.getLogger(CharacterController.class);
 
     @PostMapping
-    public void save(@RequestBody Character object) {
+    public void save(@RequestBody Character character) {
 
-//        characterService.save(character);
+        characterService.save(character);
 
-        logger.debug("{} saved", object);
+        logger.debug("{} saved", character);
     }
 }
