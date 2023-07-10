@@ -1,8 +1,10 @@
 package com.example.dndCharCreator.entity.enums;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonDeserialize(using = AlignmentDeserializer.class)
+@JsonSerialize(using = AlignmentSerializer.class)
 public enum Alignment {
     LAWFUL_GOOD,
     NEUTRAL_GOOD,
