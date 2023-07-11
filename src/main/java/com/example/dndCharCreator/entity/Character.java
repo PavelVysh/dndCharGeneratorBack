@@ -4,6 +4,7 @@ package com.example.dndCharCreator.entity;
 import com.example.dndCharCreator.entity.enums.Alignment;
 import com.example.dndCharCreator.entity.enums.CharClass;
 import com.example.dndCharCreator.entity.enums.Race;
+import com.example.dndCharCreator.entity.parts.SavingThrows;
 import com.example.dndCharCreator.entity.parts.Stats;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -22,5 +23,8 @@ public class Character {
     private String playerName;
     private Integer experience;
     private Stats stats;
+    private SavingThrows savingThrows;
+    private String proficiency;
+    private String inspiration;
 
 }
