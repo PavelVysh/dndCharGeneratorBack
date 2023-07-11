@@ -4,11 +4,10 @@ package com.example.dndCharCreator.entity;
 import com.example.dndCharCreator.entity.enums.Alignment;
 import com.example.dndCharCreator.entity.enums.CharClass;
 import com.example.dndCharCreator.entity.enums.Race;
+import com.example.dndCharCreator.entity.parts.Stats;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.List;
 
 @Data
 @Document("chars")
@@ -22,5 +21,6 @@ public class Character {
     private String background;
     private String playerName;
     private Integer experience;
+    private Stats stats;
 
 }
