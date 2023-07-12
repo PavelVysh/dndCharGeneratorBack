@@ -11,6 +11,8 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Data
 @Document("chars")
 public class Character {
@@ -28,5 +30,7 @@ public class Character {
     private String proficiency;
     private String inspiration;
     private Skills skills;
+    private Integer passiveWisdom;
+    private List<String> languages;
 
 }
