@@ -4,6 +4,7 @@ package com.example.dndCharCreator.entity;
 import com.example.dndCharCreator.entity.enums.Alignment;
 import com.example.dndCharCreator.entity.enums.CharClass;
 import com.example.dndCharCreator.entity.enums.Race;
+import com.example.dndCharCreator.entity.parts.DeathSaves;
 import com.example.dndCharCreator.entity.parts.SavingThrows;
 import com.example.dndCharCreator.entity.parts.Skills;
 import com.example.dndCharCreator.entity.parts.Stats;
@@ -32,5 +33,11 @@ public class Character {
     private Skills skills;
     private Integer passiveWisdom;
     private List<String> languages;
-
+    private Integer armorClass;
+    private Integer maxHp;
+    private Integer currentHp;
+    private Integer tempHp;
+    private Integer totalHitDice;
+    private DeathSaves deathSaveSuccesses;
+    private DeathSaves deathSaveFailures;
 }
