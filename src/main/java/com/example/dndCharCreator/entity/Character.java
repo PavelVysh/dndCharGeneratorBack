@@ -4,6 +4,7 @@ package com.example.dndCharCreator.entity;
 import com.example.dndCharCreator.entity.enums.Alignment;
 import com.example.dndCharCreator.entity.enums.CharClass;
 import com.example.dndCharCreator.entity.enums.Race;
+import com.example.dndCharCreator.entity.parts.DeathSaves;
 import com.example.dndCharCreator.entity.parts.SavingThrows;
 import com.example.dndCharCreator.entity.parts.Stats;
 import lombok.Data;
@@ -26,5 +27,11 @@ public class Character {
     private SavingThrows savingThrows;
     private String proficiency;
     private String inspiration;
-
+    private Integer armorClass;
+    private Integer maxHp;
+    private Integer currentHp;
+    private Integer tempHp;
+    private Integer totalHitDice;
+    private DeathSaves deathSaveSuccesses;
+    private DeathSaves deathSaveFailures;
 }
