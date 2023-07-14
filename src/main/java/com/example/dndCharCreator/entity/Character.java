@@ -26,5 +26,11 @@ public class Character {
     private SavingThrows savingThrows;
     private String proficiency;
     private String inspiration;
-
+    private Integer armorClass;
+    private Integer maxHp;
+    private Integer currentHp;
+    private Integer tempHp;
+    private Integer totalHitDice;
+    private DeathSaves deathSaveSuccesses;
+    private DeathSaves deathSaveFailures;
 }
