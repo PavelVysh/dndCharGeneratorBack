@@ -3,6 +3,8 @@ package com.example.dndCharCreator.service;
 import com.example.dndCharCreator.entity.Character;
 import com.example.dndCharCreator.repository.CharacterRepo;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,4 +21,7 @@ public class CharacterService {
         return repo.findById(id).get();
     }
 
+    public Page<Character> getAll(Pageable pageable) {
+        return repo.findAll(pageable);
+    }
 }
