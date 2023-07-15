@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/character")
-@CrossOrigin(origins = "https://dndchargen-efbb6.web.app")
+@CrossOrigin(origins = "*")
 public class CharacterController {
 
     private final CharacterService characterService;
