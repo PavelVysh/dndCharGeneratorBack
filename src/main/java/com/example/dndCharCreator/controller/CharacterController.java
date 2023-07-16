@@ -8,12 +8,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/character")
-@CrossOrigin(origins = "https://dndfront.onrender.com")
+@CrossOrigin(origins = "*")
 public class CharacterController {
 
     private final CharacterService characterService;
@@ -32,7 +34,18 @@ public class CharacterController {
         return characterService.findById(id);
     }
     @GetMapping
-    public Page<Character> getAll(Pageable pageable) {
-        return characterService.getAll(pageable);
+    public ResponseEntity<Page<Character>> getAll(Pageable pageable) {
+
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.set("Access-Control-Allow-Origin", "*");
+        responseHeaders.set("Access-Control-Allow-Methods", "*");
+        responseHeaders.set("Access-Control-Allow-Headers", "*");
+        responseHeaders.set("Access-Control-Expose-Headers", "*");
+        responseHeaders.set("Access-Control-Allow-Credentials", "true");
+
+        return ResponseEntity.ok()
+                .headers(responseHeaders)
+                .body(characterService.getAll(pageable));
+
     }
 }
