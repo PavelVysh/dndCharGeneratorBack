@@ -4,10 +4,7 @@ package com.example.dndCharCreator.entity;
 import com.example.dndCharCreator.entity.enums.Alignment;
 import com.example.dndCharCreator.entity.enums.CharClass;
 import com.example.dndCharCreator.entity.enums.Race;
-import com.example.dndCharCreator.entity.parts.DeathSaves;
-import com.example.dndCharCreator.entity.parts.SavingThrows;
-import com.example.dndCharCreator.entity.parts.Skills;
-import com.example.dndCharCreator.entity.parts.Stats;
+import com.example.dndCharCreator.entity.parts.*;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -40,4 +37,10 @@ public class Character {
     private Integer totalHitDice;
     private DeathSaves deathSaveSuccesses;
     private DeathSaves deathSaveFailures;
+    private List<Weapon> weapons;
+    private List<String> equipment;
+    private Integer copper;
+    private Integer silver;
+    private Integer gold;
+    private Integer platinum;
 }
