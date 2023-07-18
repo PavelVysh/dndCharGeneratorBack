@@ -43,4 +43,9 @@ public class Character {
     private Integer silver;
     private Integer gold;
     private Integer platinum;
+    private List<String> traits;
+    private List<String> ideals;
+    private List<String> flaws;
+    private List<String> bonds;
+    private List<String> features;
 }
