@@ -6,5 +6,5 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface CharacterRepo extends MongoRepository<Character, String> {
-    Page<Character> findAllByNameLikeIgnoreCase(String name, Pageable pageable);
+    Page<Character> findAllByNameLikeIgnoreCaseOrPlayerNameLikeIgnoreCase(String name, String playerName, Pageable pageable);
 }

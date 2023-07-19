@@ -26,6 +26,6 @@ public class CharacterService {
     }
 
     public Page<Character> search(String text, Pageable pageable) {
-        return repo.findAllByNameLikeIgnoreCase(text, pageable);
+        return repo.findAllByNameLikeIgnoreCaseOrPlayerNameLikeIgnoreCase(text, text, pageable);
     }
 }
