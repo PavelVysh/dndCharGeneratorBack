@@ -35,4 +35,9 @@ public class CharacterController {
     public Page<Character> getAll(Pageable pageable) {
         return characterService.getAll(pageable);
     }
+    @GetMapping("/search")
+    public Page<Character> search(@RequestParam String text,
+                                  Pageable pageable) {
+        return characterService.search(text, pageable);
+    }
 }

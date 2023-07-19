@@ -24,4 +24,8 @@ public class CharacterService {
     public Page<Character> getAll(Pageable pageable) {
         return repo.findAll(pageable);
     }
+
+    public Page<Character> search(String text, Pageable pageable) {
+        return repo.findAllByNameLikeIgnoreCase(text, pageable);
+    }
 }
